@@ -22,4 +22,4 @@ def about():
 def view():
     data = load_data()
 
-    return data da
+    return data 
