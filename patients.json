@@ -1,0 +1,40 @@
+{
+    "patients": [
+      {
+        "id": 1,
+        "name": "Rahul Sharma",
+        "age": 35,
+        "gender": "Male",
+        "blood_group": "O+",
+        "disease": "Fever",
+        "admitted": true
+      },
+      {
+        "id": 2,
+        "name": "Priya Verma",
+        "age": 28,
+        "gender": "Female",
+        "blood_group": "A+",
+        "disease": "Diabetes",
+        "admitted": false
+      },
+      {
+        "id": 3,
+        "name": "Amit Singh",
+        "age": 42,
+        "gender": "Male",
+        "blood_group": "B+",
+        "disease": "Hypertension",
+        "admitted": true
+      },
+      {
+        "id": 4,
+        "name": "Neha Patel",
+        "age": 30,
+        "gender": "Female",
+        "blood_group": "AB+",
+        "disease": "Asthma",
+        "admitted": false
+      }
+    ]
+  }
