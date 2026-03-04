@@ -1,4 +1,2 @@
 # FastAPI
 
-
-fastapi ji
