@@ -1,25 +1,34 @@
-from fastapi import FastAPI
-import json
+from fastapi import FastAPI, Query
+from service.products import get_all_products
 
 app = FastAPI()
 
-
-def load_data():
-    with open('patients.json' , 'r') as f:
-        data = json.load(f)
-
-        return data
-
 @app.get("/")
 def hello():
-    return {"message": "Hello World"}
+    return {"message": "Welcome to FastAPI"}
 
-@app.get("/about")
-def about():
-    return {"message": "This is the about page"}
+@app.get("/products")
+def list_products(
+    name: str = Query(
+        default=None,
+        min_length=1,
+        max_length=15,
+        description="Search by product name (case insensitive)"
+    )
+):
+    products = get_all_products()
+    
+    if name:
+        needle = name.strip().lower()
+        products  = [p for p in products if needle in p.get("name","").lower()]
 
-@app.get('/view')
-def view():
-    data = load_data()
-
-    return data 
+        if not products :
+            raise HTTPException(status_code=404, detail =f"no product found matching=(name)")
+        
+        total = len(products)
+    return { 
+        "total": total,
+        items: products
+    }
+    products = get_all_products()
+    return {"products": products, "search": name}
