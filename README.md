@@ -57,37 +57,12 @@ pip install fastapi uvicorn
 
 ---
 
-## ▶️ Run the Server
-
-```
-uvicorn main:app --reload
-```
-
-Server will start at:
-
-```
-http://127.0.0.1:8000
-```
-
 ---
 
 ## 📖 API Documentation
 
 FastAPI automatically generates API docs.
 
-Swagger UI:
-
-```
-http://127.0.0.1:8000/docs
-```
-
-ReDoc:
-
-```
-http://127.0.0.1:8000/redoc
-```
-
----
 
 ## 📌 API Endpoints
 
