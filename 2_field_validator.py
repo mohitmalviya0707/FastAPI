@@ -10,3 +10,28 @@ class Patient(BaseModel):
     married: bool
     allergies: List[str]
     contact_details: Dict[str, str]
+ @field_validator('email')
+    @classmethod
+    def email_validator(cls, value):
+
+        valid_domains = ['hdfc.com', 'icici.com']
+        # abc@gmail.com
+        domain_name = value.split('@')[-1]
+
+        if domain_name not in valid_domains:
+            raise ValueError('Not a valid domain')
+
+        return value
+    
+    @field_validator('name')
+    @classmethod
+    def transform_name(cls, value):
+        return value.upper()
+    
+    @field_validator('age', mode='after')
+    @classmethod
+    def validate_age(cls, value):
+        if 0 < value < 100:
+            return value
+        else:
+            raise ValueError('Age should be in between 0 and 100')
