@@ -10,7 +10,8 @@ class Patient(BaseModel):
     married: bool
     allergies: List[str]
     contact_details: Dict[str, str]
- @field_validator('email')
+
+    @field_validator('email')
     @classmethod
     def email_validator(cls, value):
 
@@ -35,6 +36,7 @@ class Patient(BaseModel):
             return value
         else:
             raise ValueError('Age should be in between 0 and 100')
+
 
 def update_patient_data(patient: Patient):
 
