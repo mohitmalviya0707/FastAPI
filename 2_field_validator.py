@@ -35,3 +35,17 @@ class Patient(BaseModel):
             return value
         else:
             raise ValueError('Age should be in between 0 and 100')
+
+def update_patient_data(patient: Patient):
+
+    print(patient.name)
+    print(patient.age)
+    print(patient.allergies)
+    print(patient.married)
+    print('updated')
+
+patient_info = {'name':'nitish', 'email':'abc@icici.com', 'age': '30', 'weight': 75.2, 'married': True, 'allergies': ['pollen', 'dust'], 'contact_details':{'phone':'2353462'}}
+
+patient1 = Patient(**patient_info) # validation -> type coercion
+
+update_patient_data(patient1)
