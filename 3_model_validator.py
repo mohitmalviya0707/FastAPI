@@ -15,3 +15,9 @@ class Patient(BaseModel):
             raise ValueError('Patients older than 60 must have an emergency contact')
         return model
 def update_patient_data(patient: Patient):
+
+    print(patient.name)
+    print(patient.age)
+    print(patient.allergies)
+    print(patient.married)
+    print('updated')
