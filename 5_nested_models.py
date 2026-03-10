@@ -5,5 +5,12 @@ class Address(BaseModel):
     state: str
     pin: str
 
+class Patient(BaseModel):
+
+    name: str
+    gender: str
+    age: int
+    address: Address
+
 
 
