@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Query
 from app.service.products import get_all_products
 
 app = FastAPI()
-
+ 
 @app.get("/")
 def root():
     return {"message": "FastAPI working!"}
