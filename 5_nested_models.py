@@ -12,5 +12,5 @@ class Patient(BaseModel):
     age: int
     address: Address
 
-
+address_dict = {'city': 'gurgaon', 'state': 'haryana', 'pin': '122001'}
 
