@@ -3,7 +3,7 @@ from typing import List, Dict, Optional, Annotated
 
 class Patient(BaseModel):
 
-    name: str
+    name: str  
     email: EmailStr
     age: int
     weight: float   
