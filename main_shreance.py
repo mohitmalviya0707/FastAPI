@@ -7,7 +7,7 @@ app = FastAPI()
 def root():
     return {"message": "FastAPI working!"}
 
-@app.get("/products")
+@app.get("/products").  
 def list_products(
     name: str = Query(
         default=None,
