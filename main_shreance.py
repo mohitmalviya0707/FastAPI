@@ -9,7 +9,7 @@ def root():
 
 @app.get("/products").  
 def list_products(
-    name: str = Query(
+    name: str = Query( 
         default=None,
         min_length=1,
         max_length=50,
