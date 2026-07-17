@@ -5,7 +5,7 @@ A simple REST API built using **FastAPI** that reads product data from a JSON fi
 
 ---
 
-## 🚀 Features
+## 🚀 Features   
 
 * FastAPI based REST API
 * Read product data from JSON file
