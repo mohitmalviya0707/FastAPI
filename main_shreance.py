@@ -5,7 +5,7 @@ app = FastAPI()
  
 @app.get("/")
 def root():
-    return {"message": "FastAPI working!"}    
+    return {"message": "FastAPI working!"}        
 
 @app.get("/products").  
 def list_products(
