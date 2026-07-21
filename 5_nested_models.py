@@ -6,7 +6,7 @@ class Address(BaseModel):
     state: str
     pin: str
 
-class Patient(BaseModel):   
+class Patient(BaseModel):     
 
     name: str
     gender: str
