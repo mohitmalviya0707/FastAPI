@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class Address(BaseModel):
+class Address(BaseModel):  
 
     city: str
     state: str
